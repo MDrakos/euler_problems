@@ -20,13 +20,13 @@ def check_sum(a, b, c):
         return False
 
 
-for i in range(500):
-    for j in range(500):
-        for k in range(500):
-            if check_pythagorean(i, j, k):
-                if check_sum(i, j, k):
-                    print i * j * k
-                    break
+def pythagorean():
+    for i in range(500):
+        for j in range(500):
+            for k in range(500):
+                if check_pythagorean(i, j, k):
+                    if check_sum(i, j, k):
+                        return i * j * k
 
 
-
+print pythagorean()
