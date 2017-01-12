@@ -17,22 +17,29 @@ def collatz(n):
 num = 0
 max_len = 0
 max_len_num = 0
+counter = 0
+lengths = []
 
-for i in range(1, 1000000):
+for i in range(1, 10):
     num = i
     lst = [num]
     while num != 1:
         num = collatz(num)
         lst.append(num)
-        lst_len = len(lst)
+        counter += 1
 
-        if lst_len > max_len:
-            max_len = lst_len
-            max_len_num = i
+        if num < i:
+            lst_len
+            break
+
+    lst_len = len(lst)
+    lengths[i] = lst_len
+
+    if lst_len > max_len:
+        max_len = lst_len
+        max_len_num = i
 
 elapsed = (time.time() - start)
 print max_len
 print max_len_num
 print elapsed
-
-
